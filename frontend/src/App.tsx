@@ -7,9 +7,13 @@ import { Validation } from './pages/Validation';
 import { About } from './pages/About';
 
 export const App: React.FC = () => {
+  const rawBase = import.meta.env.BASE_URL || '/';
+  const basename = rawBase.endsWith('/') && rawBase !== '/' ? rawBase.slice(0, -1) : rawBase;
+
   return (
     <ToastProvider>
       <BrowserRouter
+        basename={basename}
         future={{
           v7_startTransition: true,
           v7_relativeSplatPath: true,

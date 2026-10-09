@@ -1,0 +1,56 @@
+{
+  "status": "available",
+  "report": {
+    "model_name": "ResNet-18 (PneumoniaMNIST+)",
+    "model_version": "resnet18-pneumoniamnist224-v1+2c4f0760",
+    "dataset": "PneumoniaMNIST+ (224x224)",
+    "evaluated_on": null,
+    "split_counts": {
+      "train": 4708,
+      "val": 524,
+      "test": 624
+    },
+    "metrics": {
+      "accuracy": 0.9087,
+      "sensitivity": 0.9974,
+      "specificity": 0.7607,
+      "precision": 0.8742,
+      "recall": 0.9974,
+      "f1": 0.9317,
+      "auroc": 0.9816,
+      "false_negative_rate": 0.0026,
+      "ece": 0.057,
+      "abstention_coverage": null,
+      "rejection_rate": null
+    },
+    "confusion_matrix": {
+      "labels": [
+        "normal",
+        "pneumonia"
+      ],
+      "matrix": [
+        [
+          178,
+          56
+        ],
+        [
+          1,
+          389
+        ]
+      ]
+    },
+    "limitations": [
+      "Educational research prototype; not a medical device and not a clinical diagnosis.",
+      "Trained and evaluated on PneumoniaMNIST (pediatric chest X-rays, downsampled public benchmark); performance on adults, other hospitals, scanners, or populations is unknown.",
+      "Calibrated probabilities reflect average reliability on validation data, not a guarantee that any individual prediction is correct.",
+      "Grad-CAM heatmaps show where the model's output was sensitive; they do not confirm a medical finding.",
+      "Image-quality and out-of-distribution checks are heuristic; some unsuitable or unsupported images may pass, and some valid images may be rejected.",
+      "The system cannot guarantee zero false negatives.",
+      "No demographic metadata is available, so subgroup fairness could not be evaluated.",
+      "Validation and test splits may differ in distribution; reported test performance is the unbiased estimate.",
+      "Quality-degradation tests use synthetic degradations created for this project."
+    ],
+    "generated_at": "2026-10-08T12:00:44.740392+00:00"
+  },
+  "message": null
+}
